@@ -30,16 +30,16 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				<cloudHubDeployment>
+					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
 						<!-- Deploy User Parameter -->
-						<username>734904</username>
-						<password>HAnvitha-12345</password>
+						<username>satish_82971</username>
+						<password>HAnvitha@1234567</password>
 						<!-- Environment Parameter -->
 						<environment>Sandbox</environment>
 						<applicationName>ci-cid-poc</applicationName>
-						<businessGroup>ToyBox</businessGroup>
+						<businessGroup>practice</businessGroup>
 						<workerType>MICRO</workerType>
 						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
@@ -68,6 +68,13 @@
 			<version>1.5.2</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
+		<dependency>
+			<groupId>7bce6c10-e2f7-4fbb-99f0-f96cada30532</groupId>
+			<artifactId>mule-ci-cd-poc</artifactId>
+			<version>1.0.0</version>
+			<classifier>raml</classifier>
+			<type>zip</type>
+		</dependency>
 	</dependencies>
 
 	<repositories>
@@ -83,8 +90,7 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
-	</repositories>  
-
+	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
 			<id>mulesoft-releases</id>
@@ -96,10 +102,9 @@
 			</snapshots>
 		</pluginRepository>
 		<pluginRepository>
-    <id>mule-public</id>
-    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
-  </pluginRepository>
-		
+			<id>mule-public</id>
+			<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+		</pluginRepository>
 	</pluginRepositories>
 
 </project>
