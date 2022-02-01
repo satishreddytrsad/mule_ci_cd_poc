@@ -8,6 +8,7 @@
 	<packaging>mule-application</packaging>
 
 	<name>mule_ci_cd_poc</name>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -29,7 +30,7 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				  <cloudHubDeployment>
+				<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
 						<!-- Deploy User Parameter -->
@@ -39,10 +40,10 @@
 						<environment>Sandbox</environment>
 						<applicationName>ci-cid-poc</applicationName>
 						<businessGroup>mygroup</businessGroup>
-						<workerType>Micro</workerType>
+						<workerType>MICRO</workerType>
 						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
-					 </cloudHubDeployment>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -62,13 +63,6 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
-			<groupId>7bce6c10-e2f7-4fbb-99f0-f96cada30532</groupId>
-			<artifactId>mule-ci-cd-poc</artifactId>
-			<version>1.0.0</version>
-			<classifier>raml</classifier>
-			<type>zip</type>
-		</dependency>
-		<dependency>
 			<groupId>org.mule.modules</groupId>
 			<artifactId>mule-apikit-module</artifactId>
 			<version>1.5.2</version>
@@ -77,11 +71,10 @@
 	</dependencies>
 
 	<repositories>
-		
-<repository>
-			<id>anypoint-exchange</id>
-			<name>anypoint-exchange</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v1/organizations/5cc928cc-abf4-48b9-9c2e-da718bacb675/maven</url>
+		<repository>
+			<id>anypoint-exchange-v2</id>
+			<name>Anypoint Exchange</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
@@ -90,7 +83,7 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
-	</repositories>
+	</repositories>  
 
 	<pluginRepositories>
 		<pluginRepository>
@@ -102,6 +95,11 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
+		<pluginRepository>
+    <id>mule-public</id>
+    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+  </pluginRepository>
+		
 	</pluginRepositories>
 
 </project>
