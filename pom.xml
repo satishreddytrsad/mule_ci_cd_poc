@@ -34,12 +34,12 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
 						<!-- Deploy User Parameter -->
-						<username>satish_82971</username>
-						<password>HAnvitha@1234567</password>
+						<username>734904</username>
+						<password>HAnvitha-12345</password>
 						<!-- Environment Parameter -->
-						<environment>Design</environment>
+						<environment>Sandbox</environment>
 						<applicationName>ci-cid-poc</applicationName>
-						<businessGroup>mygroup</businessGroup>
+						<businessGroup>ToyBox</businessGroup>
 						<workerType>MICRO</workerType>
 						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
