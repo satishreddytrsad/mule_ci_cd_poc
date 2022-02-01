@@ -46,6 +46,28 @@
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
+			<plugin>
+                 <!--unzip all dependencies of classifier raml (which are to be of type zip) into src/main/resources/api therefore src/main/resources/api should be in .gitignore must unpack to src directory because only then mule-maven-plugin includes these files in generated mule-artifact.json-->
+                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-all-raml-zips</id>
+                         <!--should be done in generate-resources but mule-maven-plugin requires it to be done earlier -->
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <includeClassifiers>raml</includeClassifiers>
+                             <!--sourceDirectory points at src/main/java-->
+                            <outputDirectory>src/main/resources/api</outputDirectory>
+                             <!--exclude Exchange "deployment descriptor" because it would be interpreted as being part of the API spec-->
+                             <excludes>**/exchange.json</excludes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 
