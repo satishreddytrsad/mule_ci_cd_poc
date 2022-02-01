@@ -68,7 +68,13 @@
 			<version>1.5.2</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
-		
+		<dependency>
+			<groupId>5cc928cc-abf4-48b9-9c2e-da718bacb675</groupId>
+			<artifactId>mule-ci-cd-poc</artifactId>
+			<version>1.0.0</version>
+			<classifier>raml</classifier>
+			<type>zip</type>
+		</dependency>
 	</dependencies>
 
 	<repositories>
