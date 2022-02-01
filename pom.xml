@@ -38,7 +38,7 @@
 						<password>HAnvitha@1234567</password>
 						<!-- Environment Parameter -->
 						<environment>Sandbox</environment>
-						<applicationName>ci-cid-poc</applicationName>
+						<applicationName>ci-cid-poc_sedev</applicationName>
 						<businessGroup>practice</businessGroup>
 						<workerType>MICRO</workerType>
 						<workers>1</workers>
